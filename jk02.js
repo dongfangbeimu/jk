@@ -1,19 +1,11 @@
 /*
-IOS/安卓： 快手极速版稳定明文防黑版
-0509版本更新，内置热心网友的看广告json
+IOS/安卓： 稳定明文防黑版
+内置热心网友的看广告json
 13:00之前跑342金币+699金币（预计跑完5-6次后0金币）
 13:00以后跑80金币+100金币（13点前的0金币后可跑这个）
 四组广告数据混合，提升收益的同时还降低黑号风险。
 预计日收益5w金币。
-快手极速版CK变量ksjsbCookie
-重写：
-[task_local]
-#快手极速版
-[rewrite_local]
-[MITM]
-#IOS用第一个，安卓用第二个
-hostname = api.kuaisho*.com
-hostname = open.kuaisho*.com
+
 */
 const $$ = Envcc('');
 let acckey = $$["isNode"]() ? process["env"]["cdkey"] ? process["env"]["cdkey"] : '' : $$["getdata"]("cdkey") ? $$["getdata"]("cdkey") : '',
