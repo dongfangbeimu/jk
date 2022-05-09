@@ -1,4 +1,4 @@
-const $ = new Env('快手极速版');
+const $ = new Env('极速版');
 let res,
   ksjsbCookie = process.env.ksjsbCookie || '',
   Users = [],
