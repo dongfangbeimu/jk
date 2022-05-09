@@ -1,17 +1,6 @@
 /*
-IOS/安卓： 快手极速版解密版
-JS脚本透明，用的放心。
-0507版本，内置热心网友的看广告json，已放本人仓库，无需代理，可直接开跑。
-内置990金币+213金币+100金币，三组广告数据，提升收益降低黑号风险。
-预计日收益5-6w金币。
-重写：
-[task_local]
-#快手极速版
-[rewrite_local]
-[MITM]
-#IOS用第一个，安卓用第二个
-hostname = api.kuaisho*.com
-hostname = open.kuaisho*.com
+IOS/安卓： 极速版解密版
+
 */
 const $$ = Envcc('');
 let acckey = $$["isNode"]() ? process["env"]["cdkey"] ? process["env"]["cdkey"] : '' : $$["getdata"]("cdkey") ? $$["getdata"]("cdkey") : '',
