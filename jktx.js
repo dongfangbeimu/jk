@@ -13,7 +13,7 @@ let res,
   Users = [],
   ksjsbCash = process.env.ksjsbCash || '',
   ksjsbWithdrawTime = process.env.ksjsbWithdrawTime || 6,
-  ksjsbAggressive = process.env.ksjsbAggressive || 2,
+  ksjsbAggressive = process.env.ksjsbAggressive || 1,
   ksjsbNotify = process.env.ksjsbNotify || 1,
   index = 0,
   count = 0;
