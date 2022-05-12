@@ -7,6 +7,7 @@
 
 
 const $ = new Env('快手极速版');
+      _0x3de8b8 = new _0x4f15e2(_0x11b3c3);
 let res,
     _0x4c35fe = ["\n", '@'],
     _0x547212 = (_0x3de8b8["isNode"]() ? process["env"]["ksjsbCookie"] : _0x3de8b8['getdata']("ksjsbCookie")) || '',
