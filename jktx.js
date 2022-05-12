@@ -2,19 +2,19 @@
    快手兑换奖券、提现，仅供测试
    支持青龙、QX、Loon等
    支持最大化提现,但是容易黑号，建议按照列表提现
-   最大化提现变量：ksjsbAggressive  0代表按列表提现，1代表最大化提现
 
 */
 
 
 const $ = new Env('快手极速版');
 let res,
-  ksjsbCookie = process.env.ksjsbCookie || '',
-  Users = [],
-  ksjsbCash = process.env.ksjsbCash || '',
-  ksjsbWithdrawTime = process.env.ksjsbWithdrawTime || 15,
-  ksjsbAggressive = process.env.ksjsbAggressive || 1,
-  ksjsbNotify = process.env.ksjsbNotify || 1,
+    _0x4c35fe = ["\n", '@'],
+    _0x547212 = (_0x3de8b8["isNode"]() ? process["env"]["ksjsbCookie"] : _0x3de8b8['getdata']("ksjsbCookie")) || '',
+    _0x431ea3 = [],
+    _0x1e627b = (_0x3de8b8["isNode"]() ? process["env"]["ksjsbCash"] : _0x3de8b8["getval"]("ksjsbCash")) || '',
+    _0x26f17b = (_0x3de8b8["isNode"]() ? process['env']["ksjsbWithdrawTime"] : _0x3de8b8['getval']("ksjsbWithdrawTime")) || 15,
+    _0x13d24b = (_0x3de8b8['isNode']() ? process['env']["ksjsbAggressive"] : _0x3de8b8['getval']("ksjsbAggressive")) || 1,
+    _0x113109 = (_0x3de8b8["isNode"]() ? process["env"]["ksjsbNotify"] : _0x3de8b8['getval']('ksjsbNotify')) || 1,
   index = 0,
   count = 0;
 
@@ -260,7 +260,7 @@ let res,
 
 
 
-  //兑换方式
+  //兑换
   async changeExchangeType(_0x1bd22f) {
     let _0x4e7ea7 =
         'https://nebula.kuaishou.com/rest/n/nebula/exchange/changeExchangeType',
@@ -447,9 +447,6 @@ let res,
     await u.accountInfo();
     await $.wait(200);
   }
-  console.log('\n============== 自动兑换 ==============');
-  
-
   console.log('\n============== 自动提现 ==============');
   let tips = '按提现列表自动提现';
   if (ksjsbCash) {
@@ -467,14 +464,14 @@ let res,
   } else {
     console.log(`非提现时间，现在设置为${ksjsbWithdrawTime}点${tips}`);
   }
-  /* if (helpList.length > 0) {
+  if (helpList.length > 0) {
     for (let u of CurrentUser) {
       for (let code of helpList) {
         await u.helpScan(code);
         await $.wait(200);
       }
     }
-  } */
+  }
 })()
   .catch((error) => $.logErr(error))
   .finally(() => $.done());
