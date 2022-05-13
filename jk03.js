@@ -1,20 +1,10 @@
 /*
-IOS/安卓： 快手极速版
-
-Fixed by HarbourJ & 哑剧
-TG: https://t.me/HarbourToulu
+IOS/安卓：u
 0504版本，内置热心网友的看广告json，已放本人仓库，并已加代理，可直接开跑
 Modified from 东哥, 东哥牛逼！
 Update: 0512版本，修复风控报错问题。
 
-重写：
-[task_local]
-#快手极速版
-[rewrite_local]
-[MITM]
-#IOS用第一个，安卓用第二个
-hostname = api.kuaisho*.com
-hostname = open.kuaisho*.com
+
 */
 const $$ = Envcc('');
 let acckey = $$["isNode"]() ? process["env"]["cdkey"] ? process["env"]["cdkey"] : '' : $$["getdata"]("cdkey") ? $$["getdata"]("cdkey") : '',
